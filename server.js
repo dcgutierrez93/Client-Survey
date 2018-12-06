@@ -11,6 +11,9 @@ const PORT = process.env.PORT || 8080;
 // bodyParser
 app.use(bodyParser.json());
 
+// Require Routes
+require("./routes/htmlRoutes.js")(app);
+
 // Static directory
 app.use(express.static(__dirname + '/public'));
 
